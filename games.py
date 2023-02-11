@@ -5,7 +5,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("C:/Users/lenovo/Downloads/vgsales.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/vitisg/vendasdegames/main/vgsales.csv")
 
 df = df.dropna()
 
@@ -20,3 +20,4 @@ sns.countplot(df['Genêro'])
 fig = plt.gcf()
 fig.set_size_inches(15,10)
 plt.title('Type')
+
