@@ -14,10 +14,11 @@ df = df.rename(columns = {'Name': 'Nome', 'Platform': 'Plataforma', 'Year': 'Ano
 st.title('DADOS DE VENDAS GLOBAL DE JOGOS DE VIDEOGAME')
 st.write('Nessa aplicação, o usuário tem a opção de escolher o estado e o tipo de local para mostrar as vendas por geêro no grafico. Utilize o menu lateral para alterar a amostragem')
 
-col1, col2 = st.columns(2)
+
 locais = ['Vendas na américa do sul', 'Vendas nos EUA',
               'Vendas no Japão', 'Vendas em outros lugares', 'Venda global']
 local = st.selectbox('Qual o local das vendas?', locais)
+col1, col2 = st.columns(2)
 with col1:
        st.header("Análise das vendas por genêro e localidae")
        fig = px.histogram(df, x='Genêro', y= local)
