@@ -14,7 +14,7 @@ df = df.rename(columns = {'Name': 'Nome', 'Platform': 'Plataforma', 'Year': 'Ano
 st.title('DADOS DE VENDAS GLOBAL DE JOGOS DE VIDEOGAME')
 st.write('Nessa aplicação, o usuário tem a opção de escolher o estado e o tipo de local para mostrar as vendas por geêro no grafico. Utilize o menu lateral para alterar a amostragem')
 
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
 with col1:
        st.header("Análise das vendas por genêro e localidae")
@@ -32,9 +32,6 @@ with col2:
        fig = px.histogram(df, x= publicadora)
        fig.update_layout(bargap=0.2)
        st.plotly_chart(fig, use_container_width=True)
-with col3:
-      st.header("An owl")
-      st.image("https://static.streamlit.io/examples/owl.jpg")
 
 
 
