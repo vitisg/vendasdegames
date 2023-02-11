@@ -20,7 +20,7 @@ with col1:
        st.header("Análise das vendas por genêro e localidae")
        locais = ['Vendas na américa do sul', 'Vendas nos EUA',
               'Vendas no Japão', 'Vendas em outros lugares', 'Venda global']
-       local = st.sidebar.selectbox('Qual o local das vendas?', locais)
+       local = st.selectbox('Qual o local das vendas?', locais)
        fig = px.histogram(df, x='Genêro', y= local)
        fig.update_layout(bargap=0.2)
        st.plotly_chart(fig, use_container_width=True)
@@ -28,7 +28,7 @@ with col1:
 with col2:
        st.header("Análise das vendas por genêro e localidae")
        nomes = list(df['Publicadora'].unique())
-       publicadora = st.sidebar.selectbox('Qual publicadora de vendas?', nomes)
+       publicadora = st.selectbox('Qual publicadora de vendas?', nomes)
        fig = px.histogram(df, x= publicadora)
        fig.update_layout(bargap=0.2)
        st.plotly_chart(fig, use_container_width=True)
