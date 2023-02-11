@@ -27,9 +27,9 @@ with col1:
 
 with col2:
        st.header("Análise das vendas por genêro e localidae")
-       nomes = list(df['Publicadora'].unique())
-       publicadora = st.selectbox('Qual publicadora de vendas?', nomes)
-       fig = px.histogram(df, x= publicadora)
+       generos = list(df['Genêro'].unique())
+       genero = st.selectbox('Qual publicadora de vendas?', generos)
+       fig = px.histogram(df, x= 'Publicadora', y = genero)
        fig.update_layout(bargap=0.2)
        st.plotly_chart(fig, use_container_width=True)
 
