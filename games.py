@@ -17,3 +17,13 @@ fig = px.histogram(df, x="Genêro")
 fig.update_layout(bargap=0.2)
 st.plotly_chart(fig, use_container_width=True)
 st.caption('Os dados foram obtidos a partir o site: https://www.kaggle.com/datasets/thedevastator/global-video-game-sales')
+
+
+#ANALISE DE VENDAS
+locais = ['Vendas na américa do sul', 'Vendas nos EUA',
+       'Vendas no Japão', 'Vendas em outros lugares', 'Venda global']
+local = st.sidebar.selectbox('Qual o local das vendas?', locais)
+
+fig = px.histogram(df, x=local)
+fig.update_layout(bargap=0.2)
+st.plotly_chart(fig, use_container_width=True)
