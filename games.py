@@ -32,5 +32,8 @@ with tab1:
               fig.update_layout(yaxis_title=' ', bargap=0.2)
               st.plotly_chart(fig, use_container_width=True)
 with tab2:
-       st.header("Dados foram retirados da plataforma Kagglen 
-                 https://www.kaggle.com/datasets/ashaheedq/video-games-sales-2019")
+       st.write("Criado por Vitória")
+       st.write("LinkedIn: https://www.linkedin.com/in/vit%C3%B3ria-karolinny-2775a2182/")
+       st.write("Dados foram retirados da plataforma Kaggle")
+       st.write("https://www.kaggle.com/datasets/ashaheedq/video-games-sales-2019")
+      
