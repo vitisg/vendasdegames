@@ -14,7 +14,7 @@ st.title('DADOS DE VENDAS GLOBAL DE JOGOS DE VIDEOGAME')
 st.write(
               'Nessa aplicação, o usuário tem a opção de escolher o estado e o tipo de local para mostrar as vendas por gênero no gráfico. Utilize o as abas abaixo para escolher o tipo de análise ')
 
-tab1 = st.tabs(["Localidade"])
+tab1, tab2 = st.tabs(["Localidade", "Info"])
 with tab1:
        locais = ['Vendas na américa do sul', 'Vendas nos EUA',
                  'Vendas no Japão', 'Vendas em outros lugares', 'Venda global']
@@ -31,3 +31,5 @@ with tab1:
               fig = px.histogram(df, x='Plataforma', y=local, )
               fig.update_layout(yaxis_title=' ', bargap=0.2)
               st.plotly_chart(fig, use_container_width=True)
+with tab2:
+       st.header("Dados foram retirados da plataforma Kagglen n\https://www.kaggle.com/datasets/ashaheedq/video-games-sales-2019")
