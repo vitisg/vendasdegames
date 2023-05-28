@@ -14,7 +14,7 @@ st.title('DADOS DE VENDAS GLOBAL DE JOGOS DE VIDEOGAME')
 st.write(
               'Nessa aplicação, o usuário tem a opção de escolher o estado e o tipo de local para mostrar as vendas por gênero no gráfico. Utilize o as abas abaixo para escolher o tipo de análise ')
 
-tab1, tab2 = st.tabs(["Localidade", "Dog"])
+tab1 = st.tabs(["Localidade"])
 with tab1:
        locais = ['Vendas na américa do sul', 'Vendas nos EUA',
                  'Vendas no Japão', 'Vendas em outros lugares', 'Venda global']
