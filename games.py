@@ -31,8 +31,3 @@ with tab1:
               fig = px.histogram(df, x='Plataforma', y=local, )
               fig.update_layout(yaxis_title=' ', bargap=0.2)
               st.plotly_chart(fig, use_container_width=True)
-
-
-with tab2:
-       st.header("A dog")
-       st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
